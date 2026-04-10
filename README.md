@@ -1,0 +1,54 @@
+# Bivariate Spline Hyperelasticity
+
+This repository provides a MATLAB implementation of a data-driven constitutive modeling framework for incompressible isotropic hyperelasticity based on **bivariate B-spline surfaces**.
+
+The key idea is to represent the strain-energy density function on the **physically admissible invariant domain**, enabling:
+
+- full coupling between invariants,
+- efficient use of model parameters,
+- and **fast, robust calibration via linear least-squares**.
+
+Despite its high expressiveness, the model remains **linear in its parameters**, allowing calibration in **well under one second**.
+
+---
+
+## Quick Start
+
+Navigate to the `main` folder and run:
+
+```matlab
+run_fit_eq(struct('type', 'univariate'))
+```
+
+This fits the separable (univariate) spline model.
+
+To fit the bivariate spline surface in mapped coordinates $(\xi,\eta)$, run:
+
+```matlab
+run_fit_eq(struct('type', 'surface_uv'))
+```
+
+After calibration, generate all plots and evaluation results using:
+
+```matlab
+postprocess_eq('fit_result_eq.mat')
+```
+
+This creates a postprocessing folder with:
+
+ - model fits for UT, BT, PS
+ - spline surface in $(\xi,\eta)$
+ - pullback to $(I_1, I_2)$
+ - parameter activation
+
+## Example results
+
+<p align="center">
+  <img src="docs/eq_fit_surface_uv_physical.png" alt="Spline surface in (xi,eta)" width="20%">
+</p>
+
+<p align="center">
+  <img src="docs/eq_fit_data_UT.png" alt="Uniaxial tension (UT)" width="32%">
+  <img src="docs/eq_fit_data_BT.png" alt="Equi-biaxial tension (BT)" width="32%">
+  <img src="docs/eq_fit_data_PS.png" alt="Pure shear (PS)" width="32%">
+</p>
