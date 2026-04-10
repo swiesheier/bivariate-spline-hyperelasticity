@@ -44,11 +44,12 @@ This creates a postprocessing folder with:
 ## Example results
 
 <p align="center">
-  <img src="media/eq_fit_surface_uv_physical.png" alt="Spline surface in (xi,eta)" width="20%">
+  <img src="media/eq_fit_surface_uv.png" alt="Spline surface in (xi,eta)" width="40%">
+  <img src="media/eq_fit_surface_uv_physical.png" alt="Spline surface in (I1,I2)" width="40%">
 </p>
 
 <p align="center">
   <img src="media/eq_fit_data_UT.png" alt="Uniaxial tension (UT)" width="32%">
-  <img src="media/eq_fit_data_BT.png" alt="Equi-biaxial tension (BT)" width="32%">
+  <img src="media/eq_fit_data_ET.png" alt="Equi-biaxial tension (BT)" width="32%">
   <img src="media/eq_fit_data_PS.png" alt="Pure shear (PS)" width="32%">
 </p>
