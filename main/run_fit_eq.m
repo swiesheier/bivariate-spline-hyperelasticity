@@ -293,9 +293,9 @@ function lambda_pen = choose_default_lambda(model)
     %       penalty: lambda_pen * ||J*x||^2 where J is the second derivative penalty operator
 
     if strcmpi(model.type,'surface_uv')
-        lambda_pen = 5.917686e-05;
+        lambda_pen = 5.1e-06;
     elseif strcmpi(model.type,'surface_i1i2')
-        lambda_pen = 9.712740e-04;
+        lambda_pen = 3.6e-6;
     else
         lambda_pen = 0.0; % no penalty for univariate splines
     end
