@@ -98,8 +98,11 @@ function run_fit_eq(opts)
             fprintf('Checking consistency of linear system at initial guess:\n');
             fprintf('  ||(A*x0 - y) - rvec0|| = %.6e\n', norm(r_lin - rvec0));
 
+            t_start = tic();
             [x_opt, resnorm, residual, exitflag, output, lambda] = ...
                 lsqlin(A_aug, y_aug, Aineq, bineq, [], [], lb, ub, x0, opts); %#ok<ASGLU>
+            t_end = toc(t_start);
+            fprintf('Optimization completed in %.2f seconds.\n', t_end);
 
             [r,J] = objective_multi(x_opt, model, prot, data, scaled_penalty(penalty, lambda_pen));
 
