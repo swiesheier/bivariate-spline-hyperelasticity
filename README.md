@@ -8,7 +8,7 @@ The key idea is to represent the strain-energy density function on the **physica
 - efficient use of model parameters,
 - and **fast, robust calibration via linear least-squares**.
 
-Despite its high expressiveness, the model remains **linear in its parameters**, allowing calibration in **well under one second**.
+Despite its high expressiveness, the model remains linear in its parameters, enabling fast, robust, and initialization-independent calibration in well under one second.
 
 ---
 
@@ -28,13 +28,15 @@ To fit the bivariate spline surface in mapped coordinates $(\xi,\eta)$, run:
 run_fit_eq(struct('type', 'surface_uv'))
 ```
 
+The calibration is finised in **0.06 seconds**, and the results are saved in `fit_result_eq.mat`.
+
 After calibration, generate all plots and evaluation results using:
 
 ```matlab
 postprocess_eq('fit_result_eq.mat')
 ```
 
-This creates a postprocessing folder with:
+This creates a postprocessing folder containing:
 
  - model fits for UT, BT, PS
  - spline surface in $(\xi,\eta)$
