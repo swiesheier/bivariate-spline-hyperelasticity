@@ -55,3 +55,8 @@ This creates a postprocessing folder containing:
   <img src="media/eq_fit_data_ET.png" alt="Equi-biaxial tension (BT)" width="32%">
   <img src="media/eq_fit_data_PS.png" alt="Pure shear (PS)" width="32%">
 </p>
+
+## References
+ - [1] S. Wiesheier, M.A. Moreno-Mateos, and P. Steinmann,  
+  *Data-adaptive spline surfaces for non-separable hyperelastic energy functions*,  
+  arXiv:2604.10059 (2026). https://arxiv.org/abs/2604.10059
